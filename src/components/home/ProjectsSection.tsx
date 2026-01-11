@@ -1,66 +1,78 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { ArrowRight } from "lucide-react";
+import sonImage from "@/assets/logos/son.avif";
+import notebookImage from "@/assets/logos/notebook.avif";
+import econowImage from "@/assets/logos/econow.avif";
 
 const ProjectsSection = () => {
   const projects = [
     {
-      name: "Sell-on-Notts",
-      description: "A sustainable marketplace platform for the university community",
-      color: "bg-amber-100",
-      icon: "🛍️"
+      name: "Notebook",
+      image: notebookImage,
+      bgColor: "bg-[#C9BDA8]",
+      borderColor: "border-gray-600"
     },
     {
-      name: "NoteBook 2.0",
-      description: "Empowering education through accessible learning resources",
-      color: "bg-blue-100",
-      icon: "📚"
+      name: "Econow",
+      image: econowImage,
+      bgColor: "bg-[#cfffda]",
+      borderColor: "border-gray-600"
     },
     {
-      name: "EcoNow 2.0",
-      description: "Environmental sustainability initiatives for a greener future",
-      color: "bg-green-100",
-      icon: "🌱"
+      name: "Events",
+      image: null,
+      bgColor: "bg-[#F5F5DC]",
+      borderColor: "border-gray-600",
+    },
+    {
+      name: "Sell on Notts",
+      image: sonImage,
+      bgColor: "bg-[#1B3A6B]",
+      borderColor: "border-gray-600"
     },
     {
       name: "Maison",
-      description: "Supporting local artisans and preserving traditional crafts",
-      color: "bg-purple-100",
-      icon: "🎨"
+      image: null,
+      bgColor: "bg-[#FDB913]",
+      borderColor: "border-black"
+    },
+    {
+      name: "Marketing Master Class",
+      image: null,
+      bgColor: "bg-[#FDB913]",
+      borderColor: "border-black",
     }
   ];
 
   return (
-    <section className="py-20 bg-muted">
+    <section className="py-20 bg-[#FDB913]">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <p className="text-sm font-semibold text-primary mb-2 tracking-wide uppercase">
-            Our Ongoing
-          </p>
-          <h2 className="text-5xl font-bold text-foreground">PROJECTS</h2>
+        {/* Header */}
+        <div className="text-center mb-16">
+          <h2 className="text-6xl md:text-7xl font-bold text-black">Our Projects</h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
-          {projects.map((project, index) => (
-            <Card
-              key={index}
-              className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 cursor-pointer border-2 hover:border-primary"
-            >
-              <CardContent className="p-6">
-                <div className={`w-16 h-16 ${project.color} rounded-lg flex items-center justify-center text-3xl mb-4`}>
-                  {project.icon}
-                </div>
-                <h3 className="text-xl font-bold text-foreground mb-3">
-                  {project.name}
-                </h3>
-                <p className="text-muted-foreground mb-4 leading-relaxed">
-                  {project.description}
-                </p>
-                <div className="flex items-center text-primary font-semibold group-hover:translate-x-2 transition-transform">
-                  Learn More <ArrowRight className="ml-2" size={18} />
-                </div>
-              </CardContent>
-            </Card>
-          ))}
+        {/* Projects Grid */}
+        <div className="max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {projects.map((project, index) => (
+              <Card
+                key={index}
+                className={`${project.bgColor} border-4 ${project.borderColor} rounded-3xl overflow-hidden hover:scale-105 transition-transform duration-300 cursor-pointer`}
+              >
+                <CardContent className="p-0 flex items-center justify-center min-h-[280px]">
+                  {project.image ? (
+                    <img
+                      src={project.image}
+                      alt={project.name}
+                      className="w-full h-full object-cover"
+                    />
+                  ) : (
+                    <h3 className="text-5xl font-semibold text-black">{project.name}</h3>
+                  )}
+                </CardContent>
+              </Card>
+            ))}
+          </div>
         </div>
       </div>
     </section>
