@@ -17,9 +17,9 @@ const TeamMember = ({ name, title, description, image, reverse = false }: TeamMe
                 />
             </div>
             <div className="lg:w-1/2 space-y-4">
-                <h3 className="text-4xl md:text-5xl font-bold text-foreground">{name}</h3>
-                <h4 className="text-2xl md:text-3xl font-semibold text-primary">{title}</h4>
-                <p className="text-lg md:text-xl text-muted-foreground leading-relaxed text-justify">{description}</p>
+                <h3 className="text-3xl md:text-4xl font-bold text-foreground">{name}</h3>
+                <h4 className="text-xl md:text-2xl font-semibold text-primary">{title}</h4>
+                <p className="text-base md:text-lg text-muted-foreground leading-relaxed text-justify">{description}</p>
             </div>
         </div>
     );

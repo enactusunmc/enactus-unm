@@ -242,14 +242,14 @@ const PillNav: React.FC<PillNavProps> = ({
     ['--pill-bg']: pillColor,
     ['--hover-text']: hoveredPillTextColor,
     ['--pill-text']: resolvedPillTextColor,
-    ['--nav-h']: '60px',
-    ['--logo']: '52px',
+    ['--nav-h']: '62px',
+    ['--logo']: '56px',
     ['--pill-pad-x']: '24px',
     ['--pill-gap']: '5px'
   } as React.CSSProperties;
 
   return (
-    <div className="absolute top-[0.2em] z-[1000] w-full left-1/2 -translate-x-1/2 md:w-auto bg-transparent">
+    <div className="absolute top-[0.2em]  z-[1000] w-full left-1/2 -translate-x-1/2 md:w-auto">
       <nav
         className={`w-full md:w-max flex items-center justify-between md:justify-start box-border px-4 md:px-0 bg-transparent ${className}`}
         aria-label="Primary"
@@ -348,7 +348,7 @@ const PillNav: React.FC<PillNavProps> = ({
                   </span>
                   {isActive && (
                     <span
-                      className="absolute left-1/2 -bottom-[6px] -translate-x-1/2 w-3 h-3 rounded-full z-[4]"
+                      className="absolute left-1/2 -bottom-[2px] -translate-x-1/2 w-3 h-3 rounded-full z-[4]"
                       style={{ background: 'var(--base, #000)' }}
                       aria-hidden="true"
                     />

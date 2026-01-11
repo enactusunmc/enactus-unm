@@ -25,21 +25,21 @@ const Team = () => {
             />
           </div>
           <div className="container mx-auto px-4 relative z-10">
-            <h1 className="text-5xl font-bold text-foreground mb-8 text-center animate-in fade-in duration-1000">
+            <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-2 text-center animate-in fade-in duration-1000">
               OUR TEAM
             </h1>
-            <p className="text-2xl bg-[#fcf9e6] px-5 py-5 rounded-3xl font-semibold text-justify text-muted-foreground max-w-7xl mx-auto animate-in fade-in duration-1000 delay-300">
+            <p className="text-lg md:text-xl bg-[#fcf9e6] px-5 py-5 rounded-3xl font-semibold text-justify text-muted-foreground max-w-4xl mx-auto animate-in fade-in duration-1000 delay-300">
               Here in Enactus UNM, we are a group of aspiring students from University of Nottingham Malaysia who wish to transform the live of others and the world by means of social entrepreneurship.
               <br></br>Guided by academic advisors and business experts, we create and implement community empowerment projects around the globe. The experience not only transforms lives, it helps us to develop the kind of talent and perspective that are essential to leadership in this ever-more complicated and challenging world.
             </p>
           </div>
         </section>
 
-        <section className="py-20 bg-[#fdffe0]">
+        <section className="py-10 bg-[#fdffe0]">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
-              <h2 className="text-4xl font-bold text-foreground mb-12 text-center">
-                Meet the Team
+              <h2 className="text-4xl font-bold text-foreground mb-6 text-center">
+                <u>Meet the Team</u>
               </h2>
               <Tabs defaultValue="5ps" className="w-full">
                 <TabsList className="flex flex-wrap justify-center gap-4 mb-12 bg-transparent h-auto p-0">

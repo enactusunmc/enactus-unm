@@ -13,17 +13,17 @@ const HeroSection = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 text-center -mt-[500px]">
+      <div className="relative z-10 container mx-auto px-4 text-center">
         <div className="max-w-4xl mx-auto">
-          <div className="mb-24 h-56 md:h-64 flex items-center justify-center">
+          <div className="h-56 md:h-64 flex items-center justify-center">
             <TextPressure
               text="ENACTUS"
               textColor="#FDB913"
               className="animate-fade-in"
-              minFontSize={80}
+              minFontSize={50}
             />
           </div>
-          <p className="text-2xl md:text-3xl text-primary mb-12 font-medium tracking-wide">
+          <p className="text-xl md:text-2xl text-primary mb-12 font-medium tracking-wide">
             STUDENT ORGANISATION ON SOCIAL ENTERPRISE
           </p>
 

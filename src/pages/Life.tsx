@@ -104,20 +104,20 @@ const Life = () => {
             />
           </div>
           <div className="container mx-auto px-4 relative z-10">
-            <h1 className="text-6xl md:text-7xl font-bold text-foreground mb-8 text-center animate-in fade-in duration-1000">
-              LIFE @ ENACTUS
+            <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-8 text-center animate-in fade-in duration-1000">
+              LIFE@ENACTUS
             </h1>
-            <p className="text-2xl font-semibold bg-[#fcf9e6] px-5 py-5 rounded-3xl text-center text-muted-foreground max-w-5xl mx-auto animate-in fade-in duration-1000 delay-300">
+            <p className="text-lg md:text-xl font-semibold bg-[#fcf9e6] px-5 py-5 rounded-3xl text-center text-muted-foreground max-w-3xl mx-auto animate-in fade-in duration-1000 delay-300">
               Explore our journey, activities, and the impact we've made together.
             </p>
           </div>
         </section>
 
-        <section className="py-20 bg-[#fdffe0]">
+        <section className="py-10 bg-[#fdffe0]">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <Tabs defaultValue="24-25" className="w-full">
-                <TabsList className="flex justify-center gap-4 mb-12 bg-transparent h-auto p-0">
+                <TabsList className="flex justify-center gap-4 mb-6 bg-transparent h-auto p-0">
                   <TabsTrigger
                     value="24-25"
                     className="px-8 py-4 text-xl font-semibold rounded-full data-[state=active]:bg-primary data-[state=active]:text-foreground bg-muted hover:bg-muted/80 transition-all"
@@ -134,7 +134,7 @@ const Life = () => {
 
                 <TabsContent value="24-25" className="space-y-8">
                   <div className="text-center mb-8">
-                    <h2 className="text-5xl md:text-6xl font-bold text-foreground mb-4">Academic Year 24/25</h2>
+                    <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Academic Year 24/25</h2>
                     <p className="text-xl text-muted-foreground">A milestone only one can hope to achieve.</p>
                   </div>
                   <div className="space-y-16">
@@ -148,9 +148,9 @@ const Life = () => {
                           />
                         </div>
                         <div className="lg:w-1/2 space-y-6">
-                          <h3 className="text-4xl md:text-5xl font-bold text-foreground">{activity.title}</h3>
-                          <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed">{activity.description}</p>
-                          <button className="bg-primary text-foreground px-8 py-3 text-lg rounded font-semibold hover:bg-primary/90 transition-colors">
+                          <h3 className="text-2xl md:text-3xl font-bold text-foreground">{activity.title}</h3>
+                          <p className="text-base md:text-lg text-muted-foreground leading-relaxed">{activity.description}</p>
+                          <button className="bg-primary text-foreground px-8 py-3 text-base rounded font-semibold hover:bg-primary/90 transition-colors">
                             Read More
                           </button>
                         </div>
@@ -163,7 +163,7 @@ const Life = () => {
                   <div className="space-y-16">
                     {carousels2324.map((carousel, index) => (
                       <div key={index} className="space-y-6">
-                        <h3 className="text-4xl md:text-5xl font-bold text-foreground text-center">{carousel.title}</h3>
+                        <h3 className="text-2xl md:text-3xl font-bold text-foreground text-center">{carousel.title}</h3>
                         <Carousel
                           opts={{
                             align: "start",
