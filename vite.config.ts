@@ -4,8 +4,8 @@ import path from "path";
 import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
-export default defineConfig(({ mode }) => {
-  const isProd = process.env.NODE_ENV === 'production';
+export default defineConfig(({ mode, command }) => {
+  const isProd = command === 'build';
 
   return {
     base: isProd ? '/enactus-unm/' : '/',
