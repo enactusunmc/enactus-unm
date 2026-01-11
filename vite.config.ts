@@ -8,7 +8,7 @@ export default defineConfig(({ mode, command }) => {
   const isProd = command === 'build';
 
   return {
-    base: isProd ? './' : '/',
+    base: isProd ? '/enactus-unm/' : '/',
     server: {
       host: "::",
       port: 8080,
