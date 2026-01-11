@@ -48,7 +48,9 @@ const ProjectsSection = () => {
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-6xl md:text-7xl font-bold text-black">Our Projects</h2>
+          <h2 className="text-6xl md:text-7xl font-bold text-black animate-fade-in">
+            Our Projects
+          </h2>
         </div>
 
         {/* Projects Grid */}

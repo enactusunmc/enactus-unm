@@ -1,4 +1,5 @@
 import heroBanner from "@/assets/hero_banner.avif";
+import TextPressure from "@/components/TextPressure";
 
 const HeroSection = () => {
   return (
@@ -14,9 +15,14 @@ const HeroSection = () => {
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 text-center -mt-[500px]">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-8xl md:text-9xl font-bold text-primary mb-6 animate-fade-in">
-            ENACTUS
-          </h1>
+          <div className="mb-24 h-56 md:h-64 flex items-center justify-center">
+            <TextPressure
+              text="ENACTUS"
+              textColor="#FDB913"
+              className="animate-fade-in"
+              minFontSize={80}
+            />
+          </div>
           <p className="text-2xl md:text-3xl text-primary mb-12 font-medium tracking-wide">
             STUDENT ORGANISATION ON SOCIAL ENTERPRISE
           </p>

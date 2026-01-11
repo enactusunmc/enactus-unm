@@ -1,70 +1,53 @@
-import { useState } from "react";
-import { NavLink } from "@/components/NavLink";
-import { Menu, X } from "lucide-react";
-import enactusLogo from "@/assets/enactus-logo-full.png";
+import { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
+import PillNav, { PillNavItem } from "@/components/PillNav";
 
 const Navigation = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
+  const [activeHref, setActiveHref] = useState(location.pathname);
 
-  const navItems = [
-    { name: "Home", path: "/" },
-    { name: "Our Team", path: "/team" },
-    { name: "Life@Enactus", path: "/life" },
-    { name: "Events", path: "/events" },
-    { name: "Sell-on-Notts", path: "/sell-on-notts" },
-    { name: "NoteBook 2.0", path: "/notebook" },
-    { name: "EcoNow 2.0", path: "/econow" },
+  useEffect(() => {
+    setActiveHref(location.pathname);
+  }, [location.pathname]);
+
+  const navItems: PillNavItem[] = [
+    { label: "Home", href: "/" },
+    {
+      label: "Our Team",
+      href: "/team",
+      children: [
+        { label: "Meet the Team", href: "/team" },
+        { label: "Leadership", href: "/team#leadership" },
+      ]
+    },
+    { label: "Life@Enactus", href: "/life" },
+    {
+      label: "Projects",
+      href: "/projects",
+      children: [
+        { label: "NoteBook 2.0", href: "/notebook" },
+        { label: "EcoNow 2.0", href: "/econow" },
+        { label: "Events", href: "/events" },
+        { label: "Sell-on-Notts", href: "/sell-on-notts" },
+        { label: "Maison", href: "/maison" },
+        { label: "Marketing Master Class", href: "/marketing-master-class" },
+      ]
+    },
+    { label: "Contact Us", href: "/contact" },
   ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
-          <NavLink to="/" className="flex items-center">
-            <img src={enactusLogo} alt="Enactus UNM" className="h-10" />
-          </NavLink>
-
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-1">
-            {navItems.map((item) => (
-              <NavLink
-                key={item.path}
-                to={item.path}
-                className="px-4 py-2 text-sm font-medium text-foreground hover:text-primary transition-colors"
-                activeClassName="text-primary"
-              >
-                {item.name}
-              </NavLink>
-            ))}
-          </div>
-
-          {/* Mobile Menu Button */}
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 text-foreground hover:text-primary transition-colors"
-          >
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
-        </div>
-
-        {/* Mobile Navigation */}
-        {isOpen && (
-          <div className="md:hidden py-4 border-t border-border">
-            {navItems.map((item) => (
-              <NavLink
-                key={item.path}
-                to={item.path}
-                onClick={() => setIsOpen(false)}
-                className="block px-4 py-3 text-sm font-medium text-foreground hover:text-primary hover:bg-muted transition-colors"
-                activeClassName="text-primary bg-muted"
-              >
-                {item.name}
-              </NavLink>
-            ))}
-          </div>
-        )}
-      </div>
-    </nav>
+    <PillNav
+      logo="/logo.png"
+      logoAlt="Enactus UNM"
+      items={navItems}
+      activeHref={activeHref}
+      baseColor="#FDB913"
+      pillColor="#FFFFFF"
+      hoveredPillTextColor="#000000"
+      pillTextColor="#000000"
+      navScale={1.5}
+    />
   );
 };
 
