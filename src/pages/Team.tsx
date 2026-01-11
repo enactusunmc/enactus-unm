@@ -4,6 +4,10 @@ import Squares from "@/components/Squares";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import FivePsContent from "@/components/team/FivePsContent";
 import ThreeMsContent from "@/components/team/ThreeMsContent";
+import TalentManagementContent from "@/components/team/TalentManagementContent";
+import OperationsContent from "@/components/team/OperationsContent";
+import CommercialVenturesContent from "@/components/team/CommercialVenturesContent";
+import MarketingContent from "@/components/team/MarketingContent";
 
 const Team = () => {
   return (
@@ -86,31 +90,19 @@ const Team = () => {
                 </TabsContent>
 
                 <TabsContent value="tm" className="space-y-8">
-                  <div className="text-center">
-                    <h3 className="text-3xl font-bold text-foreground mb-4">Talent Management</h3>
-                    <p className="text-xl text-muted-foreground">Content for Talent Management team coming soon...</p>
-                  </div>
+                  <TalentManagementContent />
                 </TabsContent>
 
                 <TabsContent value="ops" className="space-y-8">
-                  <div className="text-center">
-                    <h3 className="text-3xl font-bold text-foreground mb-4">Operations</h3>
-                    <p className="text-xl text-muted-foreground">Content for Operations team coming soon...</p>
-                  </div>
+                  <OperationsContent />
                 </TabsContent>
 
                 <TabsContent value="cv" className="space-y-8">
-                  <div className="text-center">
-                    <h3 className="text-3xl font-bold text-foreground mb-4">Commercial Ventures</h3>
-                    <p className="text-xl text-muted-foreground">Content for Commercial Ventures team coming soon...</p>
-                  </div>
+                  <CommercialVenturesContent />
                 </TabsContent>
 
                 <TabsContent value="mkt" className="space-y-8">
-                  <div className="text-center">
-                    <h3 className="text-3xl font-bold text-foreground mb-4">Marketing</h3>
-                    <p className="text-xl text-muted-foreground">Content for Marketing team coming soon...</p>
-                  </div>
+                  <MarketingContent />
                 </TabsContent>
               </Tabs>
             </div>

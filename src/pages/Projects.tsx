@@ -25,7 +25,7 @@ const Projects = () => {
                             <h1 className="text-6xl md:text-7xl font-bold text-black mb-6 animate-in fade-in duration-1000">
                                 Our Projects
                             </h1>
-                            <p className="text-2xl md:text-3xl bg-[#fcf9e6] px-5 py-5 rounded-3xl text-black/80 max-w-5xl mx-auto animate-in fade-in duration-1000 delay-300">
+                            <p className="text-2xl font-semibold md:text-3xl bg-[#fcf9e6] px-5 py-5 rounded-3xl text-black/80 max-w-5xl mx-auto animate-in fade-in duration-1000 delay-300">
                                 Explore our innovative projects making a difference
                             </p>
                         </div>

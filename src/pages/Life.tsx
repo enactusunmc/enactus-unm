@@ -107,7 +107,7 @@ const Life = () => {
             <h1 className="text-6xl md:text-7xl font-bold text-foreground mb-8 text-center animate-in fade-in duration-1000">
               LIFE @ ENACTUS
             </h1>
-            <p className="text-2xl bg-[#fcf9e6] px-5 py-5 rounded-3xl text-center text-muted-foreground max-w-5xl mx-auto animate-in fade-in duration-1000 delay-300">
+            <p className="text-2xl font-semibold bg-[#fcf9e6] px-5 py-5 rounded-3xl text-center text-muted-foreground max-w-5xl mx-auto animate-in fade-in duration-1000 delay-300">
               Explore our journey, activities, and the impact we've made together.
             </p>
           </div>
