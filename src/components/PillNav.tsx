@@ -243,7 +243,7 @@ const PillNav: React.FC<PillNavProps> = ({
     ['--hover-text']: hoveredPillTextColor,
     ['--pill-text']: resolvedPillTextColor,
     ['--nav-h']: '62px',
-    ['--logo']: '56px',
+    ['--logo']: '38px',
     ['--pill-pad-x']: '24px',
     ['--pill-gap']: '5px'
   } as React.CSSProperties;
@@ -264,10 +264,10 @@ const PillNav: React.FC<PillNavProps> = ({
             ref={el => {
               logoRef.current = el;
             }}
-            className="rounded-full p-2 inline-flex items-center justify-center overflow-hidden"
+            className="rounded-full inline-flex items-center justify-center overflow-hidden"
             style={{
-              width: 'var(--nav-h)',
-              height: 'var(--nav-h)',
+              width: 'var(--logo)',
+              height: 'var(--logo)',
               background: '#FFFFFF'
             }}
           >
@@ -281,10 +281,10 @@ const PillNav: React.FC<PillNavProps> = ({
             ref={el => {
               logoRef.current = el;
             }}
-            className="rounded-full p-2 inline-flex items-center justify-center overflow-hidden"
+            className="rounded-full inline-flex items-center justify-center overflow-hidden"
             style={{
-              width: 'var(--nav-h)',
-              height: 'var(--nav-h)',
+              width: 'var(--logo)',
+              height: 'var(--logo)',
               background: '#FFFFFF'
             }}
           >
@@ -418,8 +418,8 @@ const PillNav: React.FC<PillNavProps> = ({
           aria-expanded={isMobileMenuOpen}
           className="md:hidden rounded-full border-0 flex flex-col items-center justify-center gap-1 cursor-pointer p-0 relative"
           style={{
-            width: 'var(--nav-h)',
-            height: 'var(--nav-h)',
+            width: 'var(--logo)',
+            height: 'var(--logo)',
             background: 'var(--base, #000)'
           }}
         >
@@ -442,7 +442,7 @@ const PillNav: React.FC<PillNavProps> = ({
           background: 'var(--base, #f0f0f0)'
         }}
       >
-        <ul className="list-none m-0 p-[3px] flex flex-col gap-[3px]">
+        <ul className="list-none m-0 p-3 flex flex-col gap-3">
           {items.map(item => {
             const defaultStyle: React.CSSProperties = {
               background: 'var(--pill-bg, #fff)',
@@ -458,7 +458,7 @@ const PillNav: React.FC<PillNavProps> = ({
             };
 
             const linkClasses =
-              'block py-3 px-4 text-[20px] font-medium rounded-[50px] transition-all duration-200 ease-[cubic-bezier(0.25,0.1,0.25,1)]';
+              'block py-3 px-4 mx-2 text-[20px] font-medium rounded-[50px] transition-all duration-200 ease-[cubic-bezier(0.25,0.1,0.25,1)]';
 
             return (
               <li key={item.href}>

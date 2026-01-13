@@ -2,6 +2,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import sonImage from "@/assets/logos/son.avif";
 import notebookImage from "@/assets/logos/notebook.avif";
 import econowImage from "@/assets/logos/econow.avif";
+import FaultyTerminal from "@/components/FaultyTerminal";
 
 const ProjectsSection = () => {
   const projects = [
@@ -44,11 +45,16 @@ const ProjectsSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-[#FDB913]">
-      <div className="container mx-auto px-4">
+    <section className="py-20 relative overflow-hidden">
+      <div style={{ width: '100%', height: '100%', position: 'absolute', top: 0, left: 0, zIndex: 0 }}>
+        <FaultyTerminal
+          tint="#f8ffc2"
+        />
+      </div>
+      <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-6xl font-bold text-black animate-fade-in">
+          <h2 className="text-4xl md:text-6xl font-bold text-white animate-fade-in">
             Our Projects
           </h2>
         </div>
