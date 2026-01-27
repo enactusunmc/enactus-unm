@@ -15,7 +15,7 @@ const HeroSection = () => {
       <div className="relative z-10 container mx-auto px-4 text-center">
         <div className="max-w-4xl mx-auto">
           <div className="h-56 md:h-64 flex items-center justify-center">
-            <h1 className="text-8xl md:text-9xl font-semibold tracking-wider animate-fade-in flex">
+            <h1 className="text-5xl sm:text-6xl md:text-8xl lg:text-9xl font-semibold tracking-wider animate-fade-in flex">
               <span className="neon-letter" data-color="orange">E</span>
               <span className="neon-letter" data-color="orange">N</span>
               <span className="neon-letter" data-color="orange">A</span>
@@ -35,9 +35,23 @@ const HeroSection = () => {
       <style>{`
         .neon-letter {
           animation: neon-flicker 1.5s infinite alternate;
-          -webkit-text-stroke: 1.2px #000000;
-          transform: scaleY(1.5) scaleX(1.0);
+          -webkit-text-stroke: 0.8px #000000;
+          transform: scaleY(1.3) scaleX(1.0);
           display: inline-block;
+        }
+
+        @media (min-width: 640px) {
+          .neon-letter {
+            -webkit-text-stroke: 1px #000000;
+            transform: scaleY(1.4) scaleX(1.0);
+          }
+        }
+
+        @media (min-width: 768px) {
+          .neon-letter {
+            -webkit-text-stroke: 1.2px #000000;
+            transform: scaleY(1.5) scaleX(1.0);
+          }
         }
 
         .neon-letter[data-color="blue"] {
