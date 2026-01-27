@@ -29,7 +29,7 @@ const Footer = () => {
             <h3 className="font-bold text-lg mb-4">Connect With Us</h3>
             <div className="flex space-x-4">
               <a
-                href="https://www.instagram.com/enactusnottinghammalaysia/"
+                href="https://www.instagram.com/enactusunm/?hl=en"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2 bg-background/10 hover:bg-primary hover:text-foreground rounded-full transition-all"
@@ -37,7 +37,7 @@ const Footer = () => {
                 <Instagram size={20} />
               </a>
               <a
-                href="https://www.linkedin.com/company/enactus-unm/"
+                href="https://www.linkedin.com/company/enactusunm/?originalSubdomain=my"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2 bg-background/10 hover:bg-primary hover:text-foreground rounded-full transition-all"
