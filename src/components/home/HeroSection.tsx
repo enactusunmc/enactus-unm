@@ -22,6 +22,7 @@ const HeroSection = () => {
               className="animate-fade-in"
               minFontSize={50}
             />
+            {/* <h1 className="">ENACTUS</h1> */}
           </div>
           <p className="text-xl md:text-2xl text-primary mb-12 font-medium tracking-wide">
             STUDENT ORGANISATION ON SOCIAL ENTERPRISE

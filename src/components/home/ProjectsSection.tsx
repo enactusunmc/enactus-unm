@@ -3,15 +3,29 @@ import sonImage from "@/assets/logos/son.avif";
 import notebookImage from "@/assets/logos/notebook.avif";
 import econowImage from "@/assets/logos/econow.avif";
 import mktImage from "@/assets/logos/mkt.png";
+import evtImage from "@/assets/logos/events.jpeg";
+import maisonImage from "@/assets/logos/maison.jpeg";
 import FaultyTerminal from "@/components/FaultyTerminal";
 
 const ProjectsSection = () => {
   const projects = [
     {
-      name: "Notebook",
-      image: notebookImage,
-      bgColor: "bg-[#C9BDA8]",
-      borderColor: "border-gray-600"
+      name: "Marketing Master Class",
+      image: mktImage,
+      bgColor: "bg-[#FFFFFF]",
+      borderColor: "border-black",
+    },
+    {
+      name: "Maison",
+      image: maisonImage,
+      bgColor: "bg-[#FFFFFF]",
+      borderColor: "border-black"
+    },
+    {
+      name: "Events",
+      image: evtImage,
+      bgColor: "bg-[#F5F5DC]",
+      borderColor: "border-gray-600",
     },
     {
       name: "Econow",
@@ -20,29 +34,17 @@ const ProjectsSection = () => {
       borderColor: "border-gray-600"
     },
     {
-      name: "Events",
-      image: null,
-      bgColor: "bg-[#F5F5DC]",
-      borderColor: "border-gray-600",
+      name: "Notebook",
+      image: notebookImage,
+      bgColor: "bg-[#C9BDA8]",
+      borderColor: "border-gray-600"
     },
     {
       name: "Sell on Notts",
       image: sonImage,
-      bgColor: "bg-[#1B3A6B]",
+      bgColor: "bg-[#073879]",
       borderColor: "border-gray-600"
     },
-    {
-      name: "Maison",
-      image: sonImage,
-      bgColor: "bg-[#FDB913]",
-      borderColor: "border-black"
-    },
-    {
-      name: "Marketing Master Class",
-      image: mktImage,
-      bgColor: "bg-[#FFFFFF]",
-      borderColor: "border-black",
-    }
   ];
 
   return (
