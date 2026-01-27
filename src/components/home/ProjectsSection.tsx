@@ -2,6 +2,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import sonImage from "@/assets/logos/son.avif";
 import notebookImage from "@/assets/logos/notebook.avif";
 import econowImage from "@/assets/logos/econow.avif";
+import mktImage from "@/assets/logos/mkt.png";
 import FaultyTerminal from "@/components/FaultyTerminal";
 
 const ProjectsSection = () => {
@@ -32,14 +33,14 @@ const ProjectsSection = () => {
     },
     {
       name: "Maison",
-      image: null,
+      image: sonImage,
       bgColor: "bg-[#FDB913]",
       borderColor: "border-black"
     },
     {
       name: "Marketing Master Class",
-      image: null,
-      bgColor: "bg-[#FDB913]",
+      image: mktImage,
+      bgColor: "bg-[#FFFFFF]",
       borderColor: "border-black",
     }
   ];
