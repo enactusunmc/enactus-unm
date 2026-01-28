@@ -9,11 +9,11 @@ interface TeamMemberProps {
 const TeamMember = ({ name, title, description, image, reverse = false }: TeamMemberProps) => {
     return (
         <div className={`flex flex-col ${reverse ? 'lg:flex-row-reverse' : 'lg:flex-row'} gap-10 items-center`}>
-            <div className="lg:w-1/2">
+            <div className="lg:w-1/2 w-full">
                 <img
                     src={image}
                     alt={name}
-                    className="w-full h-[500px] object-cover rounded-3xl shadow-lg"
+                    className="w-full h-[300px] md:h-[400px] lg:h-[500px] object-cover rounded-3xl shadow-lg"
                 />
             </div>
             <div className="lg:w-1/2 space-y-4">

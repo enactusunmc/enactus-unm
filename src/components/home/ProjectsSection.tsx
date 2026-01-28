@@ -70,7 +70,7 @@ const ProjectsSection = () => {
                 key={index}
                 className={`${project.bgColor} border-4 ${project.borderColor} rounded-3xl overflow-hidden hover:scale-105 transition-transform duration-300 cursor-pointer`}
               >
-                <CardContent className="p-0 flex items-center justify-center min-h-[280px]">
+                <CardContent className="p-0 flex items-center justify-center min-h-[180px] md:min-h-[280px]">
                   {project.image ? (
                     <img
                       src={project.image}

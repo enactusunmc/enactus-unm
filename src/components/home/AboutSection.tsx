@@ -1,4 +1,5 @@
 import Particles from "../Particles";
+import CircularText from "../CircularText";
 
 const AboutSection = () => {
   return (
@@ -21,8 +22,26 @@ const AboutSection = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="flex flex-col lg:flex-row gap-12 items-center">
           {/* Left Column - About Section (60%) */}
-          <div className="px-7 lg:w-3/5 w-full">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-8 animate-fade-in">
+          <div className=" lg:w-2/5 w-full mx-7 flex flex-col justify-center space-y-5">
+            <div className="flex justify-center items-center mt-8 mb-12">
+              <CircularText
+                text="ENtrepreneurial • ACTion • US • "
+                onHover="speedUp"
+                spinDuration={20}
+                radius={120}
+                fontSize={42}
+                className="text-primary"
+                highlightColor="#FDB913"
+                defaultColor="white"
+                highlightWords={['EN', 'ACT', 'US']}
+              />
+            </div>
+
+          </div>
+
+          {/* Right Column - Values (40%) */}
+          <div className="px-7 lg:w-3/5 w-80%">
+            <h2 className="text-4xl text-center md:text-5xl font-bold text-white mb-8 animate-fade-in">
               About Us
             </h2>
             <div className="space-y-6 text-white/90">
@@ -35,24 +54,6 @@ const AboutSection = () => {
             </div>
           </div>
 
-          {/* Right Column - Values (40%) */}
-          <div className=" lg:w-2/5 w-full mx-7 flex flex-col justify-center space-y-5">
-            <div className="text-white">
-              <h3 className="text-5xl md:text-6xl leading-tight">
-                <span className="font-bold" style={{ color: '#FDB913', WebkitTextStroke: '2px white' }}>EN</span>trepreneurial.
-              </h3>
-            </div>
-            <div className="text-white">
-              <h3 className="text-5xl md:text-6xl leading-tight">
-                <span className="font-bold" style={{ color: '#FDB913', WebkitTextStroke: '2px white' }}>ACT</span>ion.
-              </h3>
-            </div>
-            <div className="text-white">
-              <h3 className="text-5xl md:text-6xl leading-tight">
-                <span className="font-bold" style={{ color: '#FDB913', WebkitTextStroke: '2px white' }}>US</span>.
-              </h3>
-            </div>
-          </div>
         </div>
       </div>
     </section>
