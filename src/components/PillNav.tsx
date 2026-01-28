@@ -249,9 +249,9 @@ const PillNav: React.FC<PillNavProps> = ({
   } as React.CSSProperties;
 
   return (
-    <div className="absolute top-[0.2em]  z-[1000] w-full left-1/2 -translate-x-1/2 md:w-auto">
+    <div className="absolute top-0 z-[1000] w-full left-1/2 -translate-x-1/2 flex items-center justify-center" style={{ height: '62px' }}>
       <nav
-        className={`w-full md:w-max flex items-center justify-between md:justify-start box-border px-4 md:px-0 bg-transparent ${className}`}
+        className={`w-full md:w-auto flex items-center justify-between md:justify-start box-border px-4 md:px-0 bg-transparent ${className}`}
         aria-label="Primary"
         style={cssVars}
       >
@@ -416,7 +416,7 @@ const PillNav: React.FC<PillNavProps> = ({
           onClick={toggleMobileMenu}
           aria-label="Toggle menu"
           aria-expanded={isMobileMenuOpen}
-          className="md:hidden rounded-full border-0 flex flex-col items-center justify-center gap-1 cursor-pointer p-0 relative"
+          className="md:hidden rounded-lg border-0 flex flex-col items-center justify-center gap-1 cursor-pointer p-0 relative"
           style={{
             width: 'var(--logo)',
             height: 'var(--logo)',

@@ -12,10 +12,10 @@ const ContactSection = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen">
       <Navigation />
 
-      <main className="flex-grow pt-20">
+      <main className="pt-16">
         <section className="py-20 bg-muted">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
@@ -109,6 +109,22 @@ const ContactSection = () => {
                     Send Message
                   </Button>
                 </form>
+              </div>
+
+              {/* Map Section */}
+              <div className="mt-12">
+                <div className="rounded-lg overflow-hidden shadow-lg h-[400px] md:h-[500px] border-4 border-black">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3984.5729658934727!2d101.87156647475732!3d2.9423971970394917!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cdca81a0c2bcb7%3A0xa6c64ca9440e10e6!2sUniversity%20of%20Nottingham%20Malaysia!5e0!3m2!1sen!2smy!4v1738056000000!5m2!1sen!2smy"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen={true}
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title="University of Nottingham Malaysia Location"
+                  />
+                </div>
               </div>
             </div>
           </div>

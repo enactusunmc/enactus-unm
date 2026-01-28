@@ -1,28 +1,26 @@
 import { useState } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import Squares from "@/components/Squares";
+import FaultyTerminal from "@/components/FaultyTerminal";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 const Projects = () => {
     return (
-        <div className="min-h-screen flex flex-col">
+        <div className="min-h-screen">
             <Navigation />
 
-            <main className="flex-grow pt-20">
+            <main className="pt-16">
                 <section className="py-20 bg-muted relative overflow-hidden">
                     <div className="absolute inset-0 z-0">
-                        <Squares
-                            borderColor="#000000"
-                            direction="diagonal"
-                            speed={0.5}
-                            squareSize={50}
-                            hoverFillColor="#cccccc"
+                        <FaultyTerminal
+                            brightness={0.3}
+                            tint="#f8ffc2"
+                            glitchAmount={0.1}
                         />
                     </div>
                     <div className="container mx-auto px-4 relative z-10">
                         <div className="text-center">
-                            <h1 className="text-4xl md:text-5xl font-bold text-black mb-6 animate-in fade-in duration-1000">
+                            <h1 className="text-4xl text-white md:text-5xl font-bold text-black mb-6 animate-in fade-in duration-1000">
                                 Our Projects
                             </h1>
                             <p className="text-lg md:text-xl font-semibold bg-[#fcf9e6] px-5 py-5 rounded-3xl text-black/80 max-w-3xl mx-auto animate-in fade-in duration-1000 delay-300">

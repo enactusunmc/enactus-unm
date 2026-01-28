@@ -1,6 +1,51 @@
 import heroBanner from "@/assets/hero_banner.avif";
 
+// Letter geometry definitions
+const LETTER_GEOMETRY: Record<string, { points: string; dots: number[][] }> = {
+  E: {
+    points: "2,0 0,0 0,2 1.5,2 0,2 0,4 2,4",
+    dots: [[2, 0], [0, 0], [0, 2], [1.5, 2], [0, 4], [2, 4]]
+  },
+  N: {
+    points: "0,4 0,0 2,4 2,0",
+    dots: [[0, 4], [0, 0], [2, 4], [2, 0]]
+  },
+  A: {
+    points: "0,4 1,0 2,4 1.5,2.5 0.5,2.5",
+    dots: [[0, 4], [1, 0], [2, 4], [1.5, 2.5], [0.5, 2.5]]
+  },
+  C: {
+    points: "2,3 2,4 0,4 0,0 2,0 2,1",
+    dots: [[2, 3], [2, 4], [0, 4], [0, 0], [2, 0], [2, 1]]
+  },
+  T: {
+    points: "0,0 2,0 1,0 1,4",
+    dots: [[0, 0], [2, 0], [1, 0], [1, 4]]
+  },
+  U: {
+    points: "0,0 0,4 2,4 2,0",
+    dots: [[0, 0], [0, 4], [2, 4], [2, 0]]
+  },
+  S: {
+    points: "2,0 0,0 0,2 2,2 2,4 0,4",
+    dots: [[2, 0], [0, 0], [0, 2], [2, 2], [2, 4], [0, 4]]
+  }
+};
+
+// Neon colors for each letter
+const NEON_COLORS = [
+  // '#2E64FE', // Blue
+  '#FF8000', // Orange
+  // '#B404AE', // Purple
+  // '#FF0000', // Red
+  // '#10B981', // Green
+  // '#06B6D4', // Cyan
+  // '#EC4899'  // Pink
+];
+
 const HeroSection = () => {
+  const text = "ENACTUS";
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image with Overlay */}
@@ -15,15 +60,42 @@ const HeroSection = () => {
       <div className="relative z-10 container mx-auto px-4 text-center">
         <div className="max-w-4xl mx-auto">
           <div className="h-56 md:h-64 flex items-center justify-center">
-            <h1 className="text-5xl sm:text-6xl md:text-8xl lg:text-9xl font-semibold tracking-wider animate-fade-in flex">
-              <span className="neon-letter" data-color="orange">E</span>
-              <span className="neon-letter" data-color="orange">N</span>
-              <span className="neon-letter" data-color="orange">A</span>
-              <span className="neon-letter" data-color="orange">C</span>
-              <span className="neon-letter" data-color="orange">T</span>
-              <span className="neon-letter" data-color="orange">U</span>
-              <span className="neon-letter" data-color="orange">S</span>
-            </h1>
+            <div className="constellation-container">
+              {text.split('').map((char, index) => {
+                const shape = LETTER_GEOMETRY[char];
+                const color = NEON_COLORS[index % NEON_COLORS.length];
+
+                if (!shape) return null;
+
+                return (
+                  <div
+                    key={index}
+                    className="constellation-letter"
+                    style={{
+                      '--neon-color': color,
+                      '--delay': `${index * 0.2}s`
+                    } as React.CSSProperties}
+                  >
+                    <svg viewBox="-0.5 -0.5 3 6">
+                      <polyline
+                        points={shape.points}
+                        className="constellation-line"
+                      />
+
+                      {shape.dots.map((dot, i) => (
+                        <circle
+                          key={i}
+                          cx={dot[0]}
+                          cy={dot[1]}
+                          r="0.15"
+                          className="constellation-dot"
+                        />
+                      ))}
+                    </svg>
+                  </div>
+                );
+              })}
+            </div>
           </div>
           <p className="text-xl md:text-2xl text-primary mb-12 font-medium tracking-wide">
             STUDENT ORGANISATION ON SOCIAL ENTERPRISE
@@ -33,114 +105,91 @@ const HeroSection = () => {
       </div>
 
       <style>{`
-        .neon-letter {
-          animation: neon-flicker 1.5s infinite alternate;
-          -webkit-text-stroke: 0.8px #000000;
-          transform: scaleY(1.3) scaleX(1.0);
-          display: inline-block;
+        .constellation-container {
+          display: flex;
+          gap: 5px;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .constellation-letter {
+          width: 35px;
+          height: 100px;
         }
 
         @media (min-width: 640px) {
-          .neon-letter {
-            -webkit-text-stroke: 1px #000000;
-            transform: scaleY(1.4) scaleX(1.0);
+          .constellation-letter {
+            width: 45px;
+            height: 130px;
+          }
+          .constellation-container {
+            gap: 6px;
           }
         }
 
         @media (min-width: 768px) {
-          .neon-letter {
-            -webkit-text-stroke: 1.2px #000000;
-            transform: scaleY(1.5) scaleX(1.0);
+          .constellation-letter {
+            width: 60px;
+            height: 180px;
+          }
+          .constellation-container {
+            gap: 8px;
           }
         }
 
-        .neon-letter[data-color="blue"] {
-          color: #000000;
-          text-shadow:
-            0 0 7px #3B82F6,
-            0 0 10px #3B82F6,
-            0 0 21px #3B82F6,
-            0 0 42px #3B82F6,
-            0 0 82px #3B82F6,
-            0 0 92px #3B82F6,
-            0 0 102px #3B82F6,
-            0 0 151px #3B82F6;
+        @media (min-width: 1024px) {
+          .constellation-letter {
+            width: 75px;
+            height: 220px;
+          }
+          .constellation-container {
+            gap: 10px;
+          }
         }
 
-        .neon-letter[data-color="orange"] {
-          color: #000000;
-          text-shadow:
-            0 0 7px #FB923C,
-            0 0 10px #FB923C,
-            0 0 21px #FB923C,
-            0 0 42px #FB923C,
-            0 0 82px #FB923C,
-            0 0 92px #FB923C,
-            0 0 102px #FB923C,
-            0 0 151px #FB923C;
+        .constellation-letter svg {
+          width: 100%;
+          height: 100%;
+          overflow: visible;
         }
 
-        .neon-letter[data-color="purple"] {
-          color: #000000;
-          text-shadow:
-            0 0 7px #C026D3,
-            0 0 10px #C026D3,
-            0 0 21px #C026D3,
-            0 0 42px #C026D3,
-            0 0 82px #C026D3,
-            0 0 92px #C026D3,
-            0 0 102px #C026D3,
-            0 0 151px #C026D3;
+        .constellation-line {
+          fill: none;
+          stroke-width: 0.15;
+          stroke-linecap: round;
+          stroke-linejoin: round;
         }
 
-        .neon-letter[data-color="red"] {
-          color: #000000;
-          text-shadow:
-            0 0 7px #EF4444,
-            0 0 10px #EF4444,
-            0 0 21px #EF4444,
-            0 0 42px #EF4444,
-            0 0 82px #EF4444,
-            0 0 92px #EF4444,
-            0 0 102px #EF4444,
-            0 0 151px #EF4444;
+        .constellation-dot {
+          stroke-width: 0.05;
+          fill: none;
         }
 
-        .neon-letter[data-color="green"] {
-          color: #000000;
-          text-shadow:
-            0 0 7px #10B981,
-            0 0 10px #10B981,
-            0 0 21px #10B981,
-            0 0 42px #10B981,
-            0 0 82px #10B981,
-            0 0 92px #10B981,
-            0 0 102px #10B981,
-            0 0 151px #10B981;
+        .constellation-line, .constellation-dot {
+          animation: neonCycle 6s infinite;
+          animation-delay: var(--delay);
         }
 
-        .neon-letter[data-color="cyan"] {
-          color: #000000;
-          text-shadow:
-            0 0 7px #06B6D4,
-            0 0 10px #06B6D4,
-            0 0 21px #06B6D4,
-            0 0 42px #06B6D4,
-            0 0 82px #06B6D4,
-            0 0 92px #06B6D4,
-            0 0 102px #06B6D4,
-            0 0 151px #06B6D4;
-        }
-
-
-        @keyframes neon-flicker {
-          0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+        @keyframes neonCycle {
+          0%, 15% {
+            stroke: rgba(255,255,255,0.3);
+            filter: drop-shadow(0 0 1px rgba(255,255,255,0.5));
+            opacity: 0.5;
+          }
+          
+          25%, 85% {
+            stroke: var(--neon-color);
             opacity: 1;
-            filter: brightness(1.2);
+            filter: 
+              drop-shadow(0 0 1px white)
+              drop-shadow(0 0 3px var(--neon-color))
+              drop-shadow(0 0 8px var(--neon-color));
           }
-          20%, 24%, 55% {        
-            opacity: 0.8;
-            filter: brightness(0.9);
+          
+          95%, 100% {
+            stroke: rgba(255,255,255,0.3);
+            filter: drop-shadow(0 0 1px rgba(255,255,255,0.5));
+            opacity: 0.5;
           }
         }
       `}</style>
