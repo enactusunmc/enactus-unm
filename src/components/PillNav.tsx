@@ -249,9 +249,9 @@ const PillNav: React.FC<PillNavProps> = ({
   } as React.CSSProperties;
 
   return (
-    <div className="absolute top-0 z-[1000] w-full left-1/2 -translate-x-1/2 flex items-center justify-center" style={{ height: '62px' }}>
+    <div className="absolute top-0 z-[1000] w-full left-1/2 -translate-x-1/2 flex items-center justify-center bg-white" style={{ height: '62px' }}>
       <nav
-        className={`w-full md:w-auto flex items-center justify-between md:justify-start box-border px-4 md:px-0 bg-transparent ${className}`}
+        className={`w-full md:w-auto flex items-center justify-between md:justify-start box-border px-4 md:px-0 bg-white ${className}`}
         aria-label="Primary"
         style={cssVars}
       >
@@ -294,14 +294,14 @@ const PillNav: React.FC<PillNavProps> = ({
 
         <div
           ref={navItemsRef}
-          className="relative items-center rounded-full hidden md:flex ml-2 bg-transparent"
+          className="relative items-center rounded-full hidden md:flex ml-2 bg-white px-1"
           style={{
             height: 'var(--nav-h)'
           }}
         >
           <ul
             role="menubar"
-            className="list-none flex items-stretch m-0 p-[3px] h-full bg-transparent"
+            className="list-none flex items-stretch m-0 p-[3px] h-full bg-white rounded-full"
             style={{ gap: 'var(--pill-gap)' }}
           >
             {items.map((item, i) => {
