@@ -28,7 +28,7 @@ const Dragon = () => {
             // Dragon travels right -> hits edge -> flips -> travels left -> hits edge -> flips -> etc.
             const screenWidth = window.innerWidth;
             // Responsive dragon width: smaller on mobile, bigger on desktop
-            const dragonWidth = screenWidth < 768 ? 150 : screenWidth < 1024 ? 250 : 400;
+            const dragonWidth = screenWidth < 768 ? 150 : screenWidth < 1024 ? 250 : 300;
             const travelDistance = screenWidth - dragonWidth - 40; // Available travel distance
 
             // Number of complete passes (right to left or left to right)
@@ -96,9 +96,9 @@ const Dragon = () => {
             ref={dragonRef}
             className="fixed z-50 pointer-events-none"
             style={{
-                top: "50%",
+                top: "120px",
                 left: `${xPosition}px`,
-                transform: `translateY(-50%) ${isFlipped ? "scaleX(-1)" : "scaleX(1)"} rotate(${baseRotation}deg)`,
+                transform: `translateY(0) ${isFlipped ? "scaleX(-1)" : "scaleX(1)"} rotate(${baseRotation}deg)`,
                 opacity: opacity,
                 transition: "transform 0.3s ease-out",
             }}
