@@ -1,8 +1,14 @@
 import { useState } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import FaultyTerminal from "@/components/FaultyTerminal";
+import FaultyTerminal from "@/components/animations/FaultyTerminal";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import Notebook from "@/components/projects/Notebook";
+import Econow from "@/components/projects/Econow";
+import Events from "@/components/projects/Events";
+import SellOnNotts from "@/components/projects/SellOnNotts";
+import Maison from "@/components/projects/Maison";
+import MarketingMasterClass from "@/components/projects/MarketingMasterClass";
 
 const Projects = () => {
     return (
@@ -39,13 +45,13 @@ const Projects = () => {
                                         value="notebook"
                                         className="px-8 py-4 text-xl font-semibold rounded-full data-[state=active]:bg-primary data-[state=active]:text-foreground bg-muted hover:bg-muted/80 transition-all"
                                     >
-                                        NoteBook 2.0
+                                        NoteBook
                                     </TabsTrigger>
                                     <TabsTrigger
                                         value="econow"
                                         className="px-8 py-4 text-xl font-semibold rounded-full data-[state=active]:bg-primary data-[state=active]:text-foreground bg-muted hover:bg-muted/80 transition-all"
                                     >
-                                        EcoNow 2.0
+                                        EcoNow
                                     </TabsTrigger>
                                     <TabsTrigger
                                         value="events"
@@ -74,45 +80,27 @@ const Projects = () => {
                                 </TabsList>
 
                                 <TabsContent value="notebook" className="space-y-8">
-                                    <div className="text-center">
-                                        <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">NoteBook 2.0</h2>
-                                        <p className="text-base md:text-lg text-muted-foreground">Content for NoteBook 2.0 coming soon...</p>
-                                    </div>
+                                    <Notebook />
                                 </TabsContent>
 
                                 <TabsContent value="econow" className="space-y-8">
-                                    <div className="text-center">
-                                        <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">EcoNow 2.0</h2>
-                                        <p className="text-base md:text-lg text-muted-foreground">Content for EcoNow 2.0 coming soon...</p>
-                                    </div>
+                                    <Econow />
                                 </TabsContent>
 
                                 <TabsContent value="events" className="space-y-8">
-                                    <div className="text-center">
-                                        <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Events</h2>
-                                        <p className="text-base md:text-lg text-muted-foreground">Content for Events coming soon...</p>
-                                    </div>
+                                    <Events />
                                 </TabsContent>
 
                                 <TabsContent value="sell-on-notts" className="space-y-8">
-                                    <div className="text-center">
-                                        <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Sell-on-Notts</h2>
-                                        <p className="text-base md:text-lg text-muted-foreground">Content for Sell-on-Notts coming soon...</p>
-                                    </div>
+                                    <SellOnNotts />
                                 </TabsContent>
 
                                 <TabsContent value="maison" className="space-y-8">
-                                    <div className="text-center">
-                                        <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Maison</h2>
-                                        <p className="text-base md:text-lg text-muted-foreground">Content for Maison coming soon...</p>
-                                    </div>
+                                    <Maison />
                                 </TabsContent>
 
                                 <TabsContent value="marketing" className="space-y-8">
-                                    <div className="text-center">
-                                        <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Marketing Master Class</h2>
-                                        <p className="text-base md:text-lg text-muted-foreground">Content for Marketing Master Class coming soon...</p>
-                                    </div>
+                                    <MarketingMasterClass />
                                 </TabsContent>
                             </Tabs>
                         </div>

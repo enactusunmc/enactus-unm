@@ -1,5 +1,5 @@
-import Particles from "../Particles";
-import CircularText from "../CircularText";
+import Particles from "../animations/Particles";
+import CircularText from "../animations/CircularText";
 
 const AboutSection = () => {
   return (

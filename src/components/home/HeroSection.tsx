@@ -35,7 +35,7 @@ const LETTER_GEOMETRY: Record<string, { points: string; dots: number[][] }> = {
 // Neon colors for each letter
 const NEON_COLORS = [
   // '#2E64FE', // Blue
-  '#FF8000', // Orange
+  '#fcbe38', // Orange
   // '#B404AE', // Purple
   // '#FF0000', // Red
   // '#10B981', // Green

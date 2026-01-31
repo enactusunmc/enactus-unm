@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import PillNav, { PillNavItem } from "@/components/PillNav";
+import PillNav, { PillNavItem } from "@/components/animations/PillNav";
 import logoImage from "/logo.png";
 
 const Navigation = () => {

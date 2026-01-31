@@ -1,4 +1,4 @@
-import TeamMember from "@/components/TeamMember";
+import TeamMember from "@/components/team/TeamMember";
 
 // Import images
 import directorImage from "@/assets/team/mkt/director.avif";

@@ -5,7 +5,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Mail, Phone, MapPin } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import FaultyTerminal from "@/components/FaultyTerminal";
+import FaultyTerminal from "@/components/animations/FaultyTerminal";
 import emailjs from '@emailjs/browser';
 
 const ContactSection = () => {

@@ -5,7 +5,7 @@ import econowImage from "@/assets/logos/econow.avif";
 import mktImage from "@/assets/logos/mkt.png";
 import evtImage from "@/assets/logos/events.jpeg";
 import maisonImage from "@/assets/logos/maison.jpeg";
-import FaultyTerminal from "@/components/FaultyTerminal";
+import FaultyTerminal from "@/components/animations/FaultyTerminal";
 
 const ProjectsSection = () => {
   const projects = [

@@ -1,4 +1,4 @@
-import TeamMember from "@/components/TeamMember";
+import TeamMember from "@/components/team/TeamMember";
 
 // Import EcoNow images
 import econowMainImage from "@/assets/team/ops/econow/main.avif";

@@ -1,6 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import FaultyTerminal from "@/components/FaultyTerminal";
+import FaultyTerminal from "@/components/animations/FaultyTerminal";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import FivePsContent from "@/components/team/FivePsContent";
 import ThreeMsContent from "@/components/team/ThreeMsContent";
@@ -24,7 +24,7 @@ const Team = () => {
           </div>
           <div className="container mx-auto px-4 relative z-10">
             <h1 className="text-3xl text-white md:text-4xl font-bold text-foreground mb-2 text-center animate-in fade-in duration-1000">
-              OUR TEAM
+              MEET THE TEAM
             </h1>
             <p className="text-lg md:text-xl bg-[#fcf9e6] px-5 py-5 rounded-3xl font-semibold text-justify text-muted-foreground max-w-4xl mx-auto animate-in fade-in duration-1000 delay-300">
               Here in Enactus UNM, we are a group of aspiring students from University of Nottingham Malaysia who wish to transform the live of others and the world by means of social entrepreneurship.
@@ -36,9 +36,6 @@ const Team = () => {
         <section className="py-10 bg-[#fdffe0]">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
-              <h2 className="text-4xl font-bold text-foreground mb-6 text-center">
-                <u>Meet the Team</u>
-              </h2>
               <Tabs defaultValue="5ps" className="w-full">
                 <TabsList className="flex flex-wrap justify-center gap-4 mb-12 bg-transparent h-auto p-0">
                   <TabsTrigger
