@@ -28,7 +28,7 @@ const Dragon = () => {
             // Dragon travels right -> hits edge -> flips -> travels left -> hits edge -> flips -> etc.
             const screenWidth = window.innerWidth;
             // Responsive dragon width: smaller on mobile, bigger on desktop
-            const dragonWidth = screenWidth < 768 ? 150 : screenWidth < 1024 ? 250 : 300;
+            const dragonWidth = screenWidth < 768 ? 150 : screenWidth < 1024 ? 200 : 250;
             const travelDistance = screenWidth - dragonWidth - 40; // Available travel distance
 
             // Number of complete passes (right to left or left to right)
@@ -59,7 +59,7 @@ const Dragon = () => {
     const calculatePosition = () => {
         const screenWidth = window.innerWidth;
         // Responsive dragon width: match the size used in scroll calculation
-        const dragonWidth = screenWidth < 768 ? 150 : screenWidth < 1024 ? 250 : 400;
+        const dragonWidth = screenWidth < 768 ? 150 : screenWidth < 1024 ? 200 : 250;
         const padding = 20;
         const travelDistance = screenWidth - dragonWidth - padding * 2;
 
@@ -107,7 +107,7 @@ const Dragon = () => {
                 <img
                     src={dragonImage}
                     alt="Dragon"
-                    className="w-40 sm:w-64 md:w-80 lg:w-96 h-auto drop-shadow-2xl"
+                    className="w-40 sm:w-48 md:w-52 lg:w-64 h-auto drop-shadow-2xl"
                     style={{
                         filter: "drop-shadow(0 0 20px rgba(253, 185, 19, 0.5))",
                     }}
