@@ -2,6 +2,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import FaultyTerminal from "@/components/animations/FaultyTerminal";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import Life2526 from "@/components/life/Life2526";
 import Life2425 from "@/components/life/Life2425";
 import Life2324 from "@/components/life/Life2324";
 
@@ -31,8 +32,14 @@ const Life = () => {
         <section className="py-10 bg-[#fdffe0]">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
-              <Tabs defaultValue="24-25" className="w-full">
+              <Tabs defaultValue="25-26" className="w-full">
                 <TabsList className="flex justify-center gap-4 mb-6 bg-transparent h-auto p-0">
+                  <TabsTrigger
+                    value="25-26"
+                    className="px-8 py-4 text-xl font-semibold rounded-full data-[state=active]:bg-primary data-[state=active]:text-foreground bg-muted hover:bg-muted/80 transition-all"
+                  >
+                    Year 25/26
+                  </TabsTrigger>
                   <TabsTrigger
                     value="24-25"
                     className="px-8 py-4 text-xl font-semibold rounded-full data-[state=active]:bg-primary data-[state=active]:text-foreground bg-muted hover:bg-muted/80 transition-all"
@@ -46,6 +53,9 @@ const Life = () => {
                     Year 23/24
                   </TabsTrigger>
                 </TabsList>
+                <TabsContent value="25-26" className="space-y-8">
+                  <Life2526 />
+                </TabsContent>
 
                 <TabsContent value="24-25" className="space-y-8">
                   <Life2425 />

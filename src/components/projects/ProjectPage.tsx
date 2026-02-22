@@ -21,10 +21,10 @@ const ProjectPage = ({ project }: ProjectPageProps) => {
         <div className="space-y-0">
 
             {/* Hero — title + logo */}
-            <section className="py-16 px-8 md:px-16 bg-background">
+            <section className="py-10 md:py-16 px-8 md:px-16 bg-background">
                 <div className="container mx-auto">
-                    <div className="flex items-center justify-between gap-8">
-                        <h1 className="text-6xl md:text-8xl font-black text-foreground leading-tight">
+                    <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6 md:gap-8">
+                        <h1 className="text-5xl md:text-8xl font-black text-foreground leading-tight">
                             {project.title}
                         </h1>
                         {project.logo && (
@@ -33,7 +33,12 @@ const ProjectPage = ({ project }: ProjectPageProps) => {
                                     src={project.logo}
                                     alt={`${project.title} logo`}
                                     className="object-contain"
-                                    style={{ width: logoSize, height: logoSize }}
+                                    style={{
+                                        width: logoSize,
+                                        height: logoSize,
+                                        maxWidth: '40vw',
+                                        maxHeight: '40vw',
+                                    }}
                                 />
                                 <span className="text-xs font-semibold tracking-widest text-muted-foreground uppercase">
                                     {project.title}
@@ -53,9 +58,14 @@ const ProjectPage = ({ project }: ProjectPageProps) => {
                     <div className="flex flex-col md:flex-row gap-12">
                         <div className="md:w-1/4 flex-shrink-0">
                             <h2 className="text-3xl font-black text-foreground leading-snug">
-                                {storyHeading.split(' ').map((word, i) => (
-                                    <span key={i}>{word}<br /></span>
-                                ))}
+                                {/* Mobile: inline */}
+                                <span className="md:hidden">{storyHeading}</span>
+                                {/* Desktop: one word per line */}
+                                <span className="hidden md:inline">
+                                    {storyHeading.split(' ').map((word, i) => (
+                                        <span key={i}>{word}<br /></span>
+                                    ))}
+                                </span>
                             </h2>
                         </div>
                         <div className="md:w-3/4">
@@ -72,55 +82,55 @@ const ProjectPage = ({ project }: ProjectPageProps) => {
                 <section className="py-16 px-8 md:px-16 bg-background">
                     <div className="container mx-auto">
                         <h2 className="text-4xl font-black text-foreground mb-10 text-center">{eventsHeading}</h2>
-                        <div className="space-y-8">
-                            {project.events.map((event, index) => (
-                                <div
-                                    key={index}
-                                    className="rounded-xl p-8 flex flex-col md:flex-row gap-8 items-center"
-                                    style={{ backgroundColor: project.colorTheme.color }}
-                                >
-                                    {/* Left — image(s), 40% */}
-                                    {event.images.length > 0 && (
-                                        <div className="w-full md:w-[40%] flex-shrink-0">
-                                            {event.images.length === 1 ? (
-                                                <img
-                                                    src={event.images[0]}
-                                                    alt={`Event ${index + 1} — image 1`}
-                                                    className="w-full h-64 object-cover rounded-lg"
-                                                />
-                                            ) : (
-                                                <Carousel className="w-full" opts={{ loop: true }}>
-                                                    <CarouselContent>
-                                                        {event.images.map((image, imgIndex) => (
-                                                            <CarouselItem key={imgIndex}>
-                                                                <img
-                                                                    src={image}
-                                                                    alt={`Event ${index + 1} — image ${imgIndex + 1}`}
-                                                                    className="w-full h-64 object-cover rounded-lg"
-                                                                />
-                                                            </CarouselItem>
-                                                        ))}
-                                                    </CarouselContent>
-                                                    <CarouselPrevious className="left-2" />
-                                                    <CarouselNext className="right-2" />
-                                                </Carousel>
-                                            )}
-                                        </div>
-                                    )}
-                                    {/* Right — description, 60% */}
-                                    <div className={event.images.length > 0 ? 'md:w-[60%]' : 'w-full'}>
-                                        {event.title && (
-                                            <h3 className="text-3xl font-black text-foreground mb-4">
-                                                {event.title}
-                                            </h3>
+                    </div>
+                    <div className="space-y-8">
+                        {project.events.map((event, index) => (
+                            <div
+                                key={index}
+                                className="rounded-xl p-8 flex flex-col md:flex-row gap-8 items-center"
+                                style={{ backgroundColor: project.colorTheme.color }}
+                            >
+                                {/* Left — image(s), 40% */}
+                                {event.images.length > 0 && (
+                                    <div className="w-full md:w-[40%] flex-shrink-0">
+                                        {event.images.length === 1 ? (
+                                            <img
+                                                src={event.images[0]}
+                                                alt={`Event ${index + 1} — image 1`}
+                                                className="w-full h-64 object-cover rounded-lg"
+                                            />
+                                        ) : (
+                                            <Carousel className="w-full" opts={{ loop: true }}>
+                                                <CarouselContent>
+                                                    {event.images.map((image, imgIndex) => (
+                                                        <CarouselItem key={imgIndex}>
+                                                            <img
+                                                                src={image}
+                                                                alt={`Event ${index + 1} — image ${imgIndex + 1}`}
+                                                                className="w-full h-64 object-cover rounded-lg"
+                                                            />
+                                                        </CarouselItem>
+                                                    ))}
+                                                </CarouselContent>
+                                                <CarouselPrevious className="left-2" />
+                                                <CarouselNext className="right-2" />
+                                            </Carousel>
                                         )}
-                                        <p className="text-xl md:text-2xl text-foreground/80 leading-relaxed whitespace-pre-line">
-                                            {event.description}
-                                        </p>
                                     </div>
+                                )}
+                                {/* Right — description, 60% */}
+                                <div className={event.images.length > 0 ? 'md:w-[60%]' : 'w-full'}>
+                                    {event.title && (
+                                        <h3 className="text-3xl font-black text-foreground mb-4">
+                                            {event.title}
+                                        </h3>
+                                    )}
+                                    <p className="text-xl md:text-2xl text-foreground/80 leading-relaxed whitespace-pre-line">
+                                        {event.description}
+                                    </p>
                                 </div>
-                            ))}
-                        </div>
+                            </div>
+                        ))}
                     </div>
                 </section>
             )}

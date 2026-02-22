@@ -18,7 +18,7 @@ export const notebookData: Project = {
     logoSize: '300px',
     events: [
         {
-            title: 'What is this event called again?',
+            title: 'Emotions in Motion',
             description: 'This interactive event combines a scavenger hunt with emotion-themed station games. Participants will navigate through a series of creative clues across the campus. At each station, they will complete challenges representing Joy, Sadness, Anger, Fear, and Disgust. Through fun, interactive and collaborative activities, the event fosters self-awareness, empathy and teamwork, encouraging participants to appreciate the value of all emotions in personal growth and relationships.',
             images: [notebook1_1, notebook1_2]
         },

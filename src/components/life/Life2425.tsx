@@ -1,4 +1,3 @@
-import { Card, CardContent } from "@/components/ui/card";
 
 // Import 24/25 images
 import sbsImage2425 from "@/assets/life/24_25/sbs_2425.avif";
@@ -43,9 +42,6 @@ const Life2425 = () => {
                         <div className="lg:w-1/2 space-y-6">
                             <h3 className="text-2xl md:text-3xl font-bold text-foreground">{activity.title}</h3>
                             <p className="text-base md:text-lg text-muted-foreground leading-relaxed">{activity.description}</p>
-                            <button className="bg-primary text-foreground px-8 py-3 text-base rounded font-semibold hover:bg-primary/90 transition-colors">
-                                Read More
-                            </button>
                         </div>
                     </div>
                 ))}
