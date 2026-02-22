@@ -33,7 +33,7 @@ const Life = () => {
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <Tabs defaultValue="25-26" className="w-full">
-                <TabsList className="flex justify-center gap-4 mb-6 bg-transparent h-auto p-0">
+                <TabsList className="flex flex-wrap ustify-center gap-4 mb-6 bg-transparent h-auto p-0">
                   <TabsTrigger
                     value="25-26"
                     className="px-8 py-4 text-xl font-semibold rounded-full data-[state=active]:bg-primary data-[state=active]:text-foreground bg-muted hover:bg-muted/80 transition-all"
