@@ -8,39 +8,39 @@ import {
 } from "@/components/ui/carousel";
 
 // Import 25/26 images
-import sbs1_2526 from "@/assets/life/25_26/sbs1_2526.jpg";
-import sbs2_2526 from "@/assets/life/25_26/sbs2_2526.jpg";
-import sbs3_2526 from "@/assets/life/25_26/sbs3_2526.jpg";
-import sbs4_2526 from "@/assets/life/25_26/sbs4_2526.jpg";
-import sbs5_2526 from "@/assets/life/25_26/sbs5_2526.jpg";
-import sbs6_2526 from "@/assets/life/25_26/sbs6_2526.jpg";
-import sbs7_2526 from "@/assets/life/25_26/sbs7_2526.jpg";
-import sbs8_2526 from "@/assets/life/25_26/sbs8_2526.jpg";
-import sbs9_2526 from "@/assets/life/25_26/sbs9_2526.jpg";
+import sbs1_2526 from "@/assets/life/25_26/sbs1_2526_converted.avif";
+import sbs2_2526 from "@/assets/life/25_26/sbs2_2526_converted.avif";
+import sbs3_2526 from "@/assets/life/25_26/sbs3_2526_converted.avif";
+import sbs4_2526 from "@/assets/life/25_26/sbs4_2526_converted.avif";
+import sbs5_2526 from "@/assets/life/25_26/sbs5_2526_converted.avif";
+import sbs6_2526 from "@/assets/life/25_26/sbs6_2526_converted.avif";
+import sbs7_2526 from "@/assets/life/25_26/sbs7_2526_converted.avif";
+import sbs8_2526 from "@/assets/life/25_26/sbs8_2526_converted.avif";
+import sbs9_2526 from "@/assets/life/25_26/sbs9_2526_converted.avif";
 
-import getaway1_2526 from "@/assets/life/25_26/getaway1_2526.jpg";
-import getaway2_2526 from "@/assets/life/25_26/getaway2_2526.jpg";
-import getaway3_2526 from "@/assets/life/25_26/getaway3_2526.jpg";
-import getaway4_2526 from "@/assets/life/25_26/getaway4_2526.jpg";
-import getaway5_2526 from "@/assets/life/25_26/getaway5_2526.jpg";
-import getaway6_2526 from "@/assets/life/25_26/getaway6_2526.jpg";
-import getaway7_2526 from "@/assets/life/25_26/getaway7_2526.jpg";
-import getaway8_2526 from "@/assets/life/25_26/getaway8_2526.jpg";
-import getaway9_2526 from "@/assets/life/25_26/getaway9_2526.jpg";
-import getaway10_2526 from "@/assets/life/25_26/getaway10_2526.jpg";
+import getaway1_2526 from "@/assets/life/25_26/getaway1_2526_converted.avif";
+import getaway2_2526 from "@/assets/life/25_26/getaway2_2526_converted.avif";
+import getaway3_2526 from "@/assets/life/25_26/getaway3_2526_converted.avif";
+import getaway4_2526 from "@/assets/life/25_26/getaway4_2526_converted.avif";
+import getaway5_2526 from "@/assets/life/25_26/getaway5_2526_converted.avif";
+import getaway6_2526 from "@/assets/life/25_26/getaway6_2526_converted.avif";
+import getaway7_2526 from "@/assets/life/25_26/getaway7_2526_converted.avif";
+import getaway8_2526 from "@/assets/life/25_26/getaway8_2526_converted.avif";
+import getaway9_2526 from "@/assets/life/25_26/getaway9_2526_converted.avif";
+import getaway10_2526 from "@/assets/life/25_26/getaway10_2526_converted.avif";
 
-import ss1_2526 from "@/assets/life/25_26/ss1_2526.jpg";
-import ss2_2526 from "@/assets/life/25_26/ss2_2526.jpg";
-import ss3_2526 from "@/assets/life/25_26/ss3_2526.jpg";
-import ss4_2526 from "@/assets/life/25_26/ss4_2526.jpg";
-import ss5_2526 from "@/assets/life/25_26/ss5_2526.jpg";
+import ss1_2526 from "@/assets/life/25_26/ss1_2526_converted.avif";
+import ss2_2526 from "@/assets/life/25_26/ss2_2526_converted.avif";
+import ss3_2526 from "@/assets/life/25_26/ss3_2526_converted.avif";
+import ss4_2526 from "@/assets/life/25_26/ss4_2526_converted.avif";
+import ss5_2526 from "@/assets/life/25_26/ss5_2526_converted.avif";
 
-import wc1_2526 from "@/assets/life/25_26/wc1_2526.jpg";
-import wc2_2526 from "@/assets/life/25_26/wc2_2526.jpg";
-import wc3_2526 from "@/assets/life/25_26/wc3_2526.jpg";
-import wc4_2526 from "@/assets/life/25_26/wc4_2526.jpg";
-import wc5_2526 from "@/assets/life/25_26/wc5_2526.jpg";
-import wc6_2526 from "@/assets/life/25_26/wc6_2526.jpg";
+import wc1_2526 from "@/assets/life/25_26/wc1_2526_converted.avif";
+import wc2_2526 from "@/assets/life/25_26/wc2_2526_converted.avif";
+import wc3_2526 from "@/assets/life/25_26/wc3_2526_converted.avif";
+import wc4_2526 from "@/assets/life/25_26/wc4_2526_converted.avif";
+import wc5_2526 from "@/assets/life/25_26/wc5_2526_converted.avif";
+import wc6_2526 from "@/assets/life/25_26/wc6_2526_converted.avif";
 
 const Life2526 = () => {
     const carousels2526 = [
