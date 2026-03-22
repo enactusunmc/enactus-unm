@@ -6,6 +6,7 @@ import FivePsContent from "@/components/team/FivePsContent";
 import ThreeMsContent from "@/components/team/ThreeMsContent";
 import TalentManagementContent from "@/components/team/TalentManagementContent";
 import OperationsContent from "@/components/team/OperationsContent";
+import ExternalRelationsContent from "@/components/team/ExternalRelationsContent";
 import CommercialVenturesContent from "@/components/team/CommercialVenturesContent";
 import MarketingContent from "@/components/team/MarketingContent";
 
@@ -63,6 +64,12 @@ const Team = () => {
                     Operations
                   </TabsTrigger>
                   <TabsTrigger
+                    value="erm"
+                    className="px-8 py-4 text-xl font-semibold rounded-full data-[state=active]:bg-primary data-[state=active]:text-foreground bg-muted hover:bg-muted/80 transition-all"
+                  >
+                    ERM
+                  </TabsTrigger>
+                  <TabsTrigger
                     value="cv"
                     className="px-8 py-4 text-xl font-semibold rounded-full data-[state=active]:bg-primary data-[state=active]:text-foreground bg-muted hover:bg-muted/80 transition-all"
                   >
@@ -90,6 +97,10 @@ const Team = () => {
 
                 <TabsContent value="ops" className="space-y-8">
                   <OperationsContent />
+                </TabsContent>
+
+                <TabsContent value="erm" className="space-y-8">
+                  <ExternalRelationsContent />
                 </TabsContent>
 
                 <TabsContent value="cv" className="space-y-8">

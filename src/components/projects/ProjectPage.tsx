@@ -69,7 +69,7 @@ const ProjectPage = ({ project }: ProjectPageProps) => {
                             </h2>
                         </div>
                         <div className="md:w-3/4">
-                            <p className="text-base md:text-lg text-foreground/80 leading-relaxed whitespace-pre-line">
+                            <p className="text-base md:text-lg text-foreground/80 leading-relaxed whitespace-pre-line text-justify">
                                 {project.description}
                             </p>
                         </div>
@@ -87,7 +87,7 @@ const ProjectPage = ({ project }: ProjectPageProps) => {
                         {project.events.map((event, index) => (
                             <div
                                 key={index}
-                                className="rounded-xl p-8 flex flex-col md:flex-row gap-8 items-center"
+                                className="p-8 flex flex-col md:flex-row gap-8 items-center"
                                 style={{ backgroundColor: project.colorTheme.color }}
                             >
                                 {/* Left — image(s), 40% */}
@@ -125,7 +125,7 @@ const ProjectPage = ({ project }: ProjectPageProps) => {
                                             {event.title}
                                         </h3>
                                     )}
-                                    <p className="text-xl md:text-2xl text-foreground/80 leading-relaxed whitespace-pre-line">
+                                    <p className="text-xl md:text-2xl text-foreground/80 leading-relaxed whitespace-pre-line text-justify">
                                         {event.description}
                                     </p>
                                 </div>
@@ -150,7 +150,7 @@ const ProjectPage = ({ project }: ProjectPageProps) => {
                             className="inline-flex items-center gap-3 bg-white/30 hover:bg-white/50 transition-colors rounded-xl px-6 py-4"
                         >
                             <Instagram className="w-6 h-6 text-foreground" strokeWidth={1.75} />
-                            <span className="text-lg font-semibold text-foreground">@{project.instagram}</span>
+                            <span className="text-lg font-semibold text-foreground text-justify">@{project.instagram}</span>
                         </a>
                     </div>
                 </section>

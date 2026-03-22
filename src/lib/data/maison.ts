@@ -19,7 +19,7 @@ export const maisonData: Project = {
     events: [
         {
             title: 'Our Merchandise',
-            description: 'Something Something',
+            description: '',
             images: [maison1_1, maison1_2, maisonMerch]
         },
     ],

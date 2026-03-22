@@ -26,10 +26,10 @@ const Projects = () => {
                     </div>
                     <div className="container mx-auto px-4 relative z-10">
                         <div className="text-center">
-                            <h1 className="text-4xl text-white md:text-5xl font-bold text-black mb-6 animate-in fade-in duration-1000">
+                            <h1 className="text-4xl text-white md:text-5xl font-bold mb-6 animate-in fade-in duration-1000">
                                 Our Projects
                             </h1>
-                            <p className="text-lg md:text-xl font-semibold bg-[#fcf9e6] px-5 py-5 rounded-3xl text-black/80 max-w-3xl mx-auto animate-in fade-in duration-1000 delay-300">
+                            <p className="text-lg md:text-xl font-semibold bg-[#fcf9e6] px-5 py-5 rounded-3xl text-black/80 max-w-3xl mx-auto animate-in fade-in duration-1000 delay-300 text-center">
                                 Explore our innovative projects making a difference
                             </p>
                         </div>

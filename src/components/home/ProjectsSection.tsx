@@ -64,18 +64,18 @@ const ProjectsSection = () => {
 
         {/* Projects Grid */}
         <div className="max-w-3xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-8 px-8 md:px-0">
             {projects.map((project, index) => (
               <Card
                 key={index}
                 className={`${project.bgColor} border-4 ${project.borderColor} rounded-3xl overflow-hidden hover:scale-105 transition-transform duration-300 cursor-pointer`}
               >
-                <CardContent className="p-0 flex items-center justify-center min-h-[180px] md:min-h-[280px]">
+                <CardContent className="p-1 md:p-0 flex items-center justify-center min-h-[140px] md:min-h-[280px]">
                   {project.image ? (
                     <img
                       src={project.image}
                       alt={project.name}
-                      className="w-full h-full object-cover"
+                      className="w-2/5 h-2/5 object-contain md:w-full md:h-full md:object-cover"
                     />
                   ) : (
                     <h3 className="text-5xl font-semibold text-black">{project.name}</h3>
