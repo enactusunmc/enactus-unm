@@ -35,9 +35,9 @@ const Navigation = () => {
           <button
             onClick={toggleDragon}
             className="bg-primary hover:bg-primary/80 text-foreground font-semibold px-3 py-2 rounded-full text-sm transition-colors"
-            title={isDragonEnabled ? "Disable dragon" : "Enable dragon"}
+            title={isDragonEnabled ? "Disable" : "Enable"}
           >
-            {isDragonEnabled ? "🐉 ON" : "🐉 OFF"}
+            {isDragonEnabled ? "🐻 ON" : "🐻 OFF"}
           </button>
         </div>
       )}
