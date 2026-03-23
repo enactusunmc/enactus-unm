@@ -6,6 +6,8 @@ import exec2Image from "@/assets/team/tm/exec2.avif";
 import exec3Image from "@/assets/team/tm/exec3.avif";
 import exec4Image from "@/assets/team/tm/exec4.avif";
 import exec5Image from "@/assets/team/tm/exec5.avif";
+import exec6Image from "@/assets/team/tm/exec6.avif";
+import exec7Image from "@/assets/team/tm/exec7.avif";
 import tmMainImage from "@/assets/team/tm/main.avif";
 import placeHolder from "/placeholder.png";
 
@@ -31,8 +33,8 @@ const TalentManagementContent = () => {
         { name: "Erfan Dani", title: "Talent Management Executive", description: "", image: exec3Image },
         { name: "Heng Hao Quan", title: "Talent Management Executive", description: "", image: exec4Image },
         { name: "Loo Zi Qing", title: "Talent Management Executive", description: "", image: exec5Image },
-        { name: "Wilson Teoh Jian Eu", title: "Talent Management Executive", description: "", image: placeHolder },
-        { name: "Muhammad Hazwan Asyraaf Bin Musria", title: "Talent Management Executive", description: "", image: placeHolder }
+        { name: "Wilson Teoh Jian Eu", title: "Talent Management Executive", description: "", image: exec6Image },
+        { name: "Muhammad Hazwan Asyraaf Bin Musria", title: "Talent Management Executive", description: "", image: exec7Image }
     ];
 
     return (

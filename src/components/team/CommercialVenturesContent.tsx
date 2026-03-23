@@ -4,6 +4,9 @@ import TeamMember from "@/components/team/TeamMember";
 import directorImage from "@/assets/team/cv/director.avif";
 import asstDirectorImage from "@/assets/team/cv/asst_director.avif";
 import cvMainImage from "@/assets/team/cv/main.avif";
+import secretaryImage from "@/assets/team/cv/secretary.avif";
+import treasurerImage from "@/assets/team/cv/treasurer.avif";
+import projectLeadImage from "@/assets/team/cv/exec1.avif";
 import placeHolder from "/placeholder.png";
 
 const CommercialVenturesContent = () => {
@@ -24,19 +27,19 @@ const CommercialVenturesContent = () => {
             name: "Ainul Zahrah Zuyyin Binti Zuwislan",
             title: "Commercial Ventures Treasurer",
             description: "",
-            image: placeHolder
+            image: treasurerImage
         },
         {
             name: "Kayana Pembayun Mahendra",
             title: "Commercial Ventures Secretary",
             description: "",
-            image: placeHolder
+            image: secretaryImage
         },
         {
             name: "Wardah Ilyana Bt Zulkefly",
             title: "Commercial Ventures Sell on Notts Project Lead",
             description: "",
-            image: placeHolder
+            image: projectLeadImage
         },
         {
             name: "Wan Azfar Imtiyaz Bin Wan Syahiduddin",
