@@ -2,9 +2,9 @@ import { Card, CardContent } from "@/components/ui/card";
 import sonImage from "@/assets/logos/son.avif";
 import notebookImage from "@/assets/logos/notebook.avif";
 import econowImage from "@/assets/logos/econow.avif";
-import mktImage from "@/assets/logos/mkt.png";
-import evtImage from "@/assets/logos/events.jpeg";
-import maisonImage from "@/assets/logos/maison.jpeg";
+import mktImage from "@/assets/logos/mkt.avif";
+import evtImage from "@/assets/logos/events.avif";
+import maisonImage from "@/assets/logos/maison.avif";
 import FaultyTerminal from "@/components/animations/FaultyTerminal";
 
 const ProjectsSection = () => {

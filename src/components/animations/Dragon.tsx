@@ -1,5 +1,5 @@
 import { useEffect, useState, useRef } from "react";
-import dragonImage from "/sunay.png";
+import dragonImage from "/sunay.avif";
 
 const Dragon = () => {
     const [scrollProgress, setScrollProgress] = useState(0);

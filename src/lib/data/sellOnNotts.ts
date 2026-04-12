@@ -1,7 +1,7 @@
 import { Project } from '../types';
 import sellOnNottsLogo from "@/assets/logos/son.avif";
-import event1 from "@/assets/projects/son/son1.png";
-import event2 from "@/assets/projects/son/son2.png";
+import event1 from "@/assets/projects/son/son1.avif";
+import event2 from "@/assets/projects/son/son2.avif";
 
 export const sellOnNottsData: Project = {
     title: 'SELL-ON-NOTTS',

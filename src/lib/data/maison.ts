@@ -1,8 +1,8 @@
 import { Project } from '../types';
-import maisonLogo from "@/assets/logos/maison.jpeg";
-import maison1_1 from "@/assets/projects/maison/maison1_1.png";
-import maison1_2 from "@/assets/projects/maison/maison1_2.png";
-import maisonMerch from "@/assets/projects/maison/maisonMerch.png";
+import maisonLogo from "@/assets/logos/maison.avif";
+import maison1_1 from "@/assets/projects/maison/maison1_1.avif";
+import maison1_2 from "@/assets/projects/maison/maison1_2.avif";
+import maisonMerch from "@/assets/projects/maison/maisonMerch.avif";
 
 export const maisonData: Project = {
     title: 'Maison',

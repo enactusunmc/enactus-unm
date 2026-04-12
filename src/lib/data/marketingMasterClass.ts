@@ -1,10 +1,10 @@
 import { Project } from '../types';
-import marketingLogo from "@/assets/logos/mkt.png";
+import marketingLogo from "@/assets/logos/mkt.avif";
 
-import marketing1_1 from "@/assets/projects/marketing/mmc1.png";
-import marketing1_2 from "@/assets/projects/marketing/mmc2.png";
-import marketing1_3 from "@/assets/projects/marketing/mmc3.png";
-import marketing1_4 from "@/assets/projects/marketing/mmc4.png";
+import marketing1_1 from "@/assets/projects/marketing/mmc1.avif";
+import marketing1_2 from "@/assets/projects/marketing/mmc2.avif";
+import marketing1_3 from "@/assets/projects/marketing/mmc3.avif";
+import marketing1_4 from "@/assets/projects/marketing/mmc4.avif";
 
 export const marketingMasterClassData: Project = {
     title: 'Marketing Master Class',

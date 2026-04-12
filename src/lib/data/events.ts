@@ -1,7 +1,7 @@
 import { Project } from '../types';
-import eventsLogo from "@/assets/logos/events.jpeg";
-import i4i1 from "@/assets/projects/events/i4i1.png";
-import i4i2 from "@/assets/projects/events/i4i2.png";
+import eventsLogo from "@/assets/logos/events.avif";
+import i4i1 from "@/assets/projects/events/i4i1.avif";
+import i4i2 from "@/assets/projects/events/i4i2.avif";
 
 export const eventsData: Project = {
     title: 'EVENTS',

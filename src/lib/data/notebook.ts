@@ -1,8 +1,8 @@
 import { Project } from '../types';
 import notebookLogo from "@/assets/logos/notebook.avif";
-import notebook1_1 from "@/assets/projects/notebook/notebook1_1.png";
-import notebook1_2 from "@/assets/projects/notebook/notebook1_2.png";
-import notebook2_1 from "@/assets/projects/notebook/notebook2_1.png";
+import notebook1_1 from "@/assets/projects/notebook/notebook1_1.avif";
+import notebook1_2 from "@/assets/projects/notebook/notebook1_2.avif";
+import notebook2_1 from "@/assets/projects/notebook/notebook2_1.avif";
 
 export const notebookData: Project = {
     title: 'Project Notebook',
